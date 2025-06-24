@@ -1,4 +1,4 @@
-package Programs.MergeLinkedlists;
+package Programs.LinkedList.MergeLinkedlists;
 
 // Node class representing each node in the linked list
 class Node {

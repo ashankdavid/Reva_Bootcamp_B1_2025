@@ -1,4 +1,4 @@
-package Programs.FindIntersection;
+package Programs.LinkedList.FindIntersection;
 
 class Node {
     int data;

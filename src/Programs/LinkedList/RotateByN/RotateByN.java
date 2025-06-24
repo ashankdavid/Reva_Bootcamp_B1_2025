@@ -1,4 +1,4 @@
-package Programs.RotateByN;
+package Programs.LinkedList.RotateByN;
 
 class Node{
     char data;

@@ -1,4 +1,4 @@
-package Programs.RemoveDuplicates;
+package Programs.LinkedList.RemoveDuplicates;
 
 import java.util.HashSet;
 

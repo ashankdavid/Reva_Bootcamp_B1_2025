@@ -17,6 +17,14 @@ public class BinaryTree {
         return new Node(val);
     }
 
+    void preDfs(Node root){
+        if(root==null){
+            return;
+        }
+        System.out.print(root.data + " ");
+        preDfs(root.left);
+        preDfs(root.right);
+    }
 }
 
 class DriverCode{
@@ -31,5 +39,11 @@ class DriverCode{
         root.left.right = bt.createNode(5);
         root.right.left = bt.createNode(6);
         root.right.right = bt.createNode(7);
+
+        root.left.right.left = bt.createNode(8); // level 4
+        root.right.left.left = bt.createNode(15);
+        root.right.left.right = bt.createNode(9);
+
+        bt.preDfs(root);
     }
 }

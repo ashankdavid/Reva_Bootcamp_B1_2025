@@ -1,5 +1,8 @@
 package Data_Structure.Trees.BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node{
     int data;
     Node left;
@@ -25,6 +28,22 @@ public class BinaryTree {
         preDfs(root.left);
         preDfs(root.right);
     }
+
+    void BFS(Node root){
+        if(root==null){return;}
+        Queue<Node> q = new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            Node temp = q.poll();
+            System.out.print(temp.data + " ");
+            if(temp.left!=null){
+                q.offer(temp.left);
+            }
+            if(temp.right!=null){
+                q.offer(temp.right);
+            }
+        }
+    }
 }
 
 class DriverCode{
@@ -43,7 +62,10 @@ class DriverCode{
         root.left.right.left = bt.createNode(8); // level 4
         root.right.left.left = bt.createNode(15);
         root.right.left.right = bt.createNode(9);
-
+        System.out.print("Pre order DFS: ");
         bt.preDfs(root);
+        System.out.println();
+        System.out.print("BFS Traversal: ");
+        bt.BFS(root);
     }
 }
